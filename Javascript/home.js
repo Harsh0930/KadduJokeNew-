@@ -38,6 +38,7 @@ const searchVideos = () => {
 
         //Clear previous search results
         document.querySelector(".not_found").innerHTML = "";
+        document.querySelector(".Search_Cointainer").innerHTML = "";
 
         if (videoName == "" || !videoName || matchingVideos.length == 0) {
             //console.log("No videos found.");
@@ -213,7 +214,8 @@ const getMostPopularVideos = async () => {
 // Function for Comedy Movies videos 
 const getComedyMoviesVideos = async () => {
     try {
-        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR&key=${Api_Key}`);
+        const playlistId ="PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR"
+        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Api_Key}`);
         console.log(getMoviesVideo);
 
         videos = getMoviesVideo.data.items;
