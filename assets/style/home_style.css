@@ -55,8 +55,23 @@ body {
   border-bottom: 1px solid #fea82853;
 }
 
-.Game_Banner video {
-  height: 350px;
+.Game_Banner img {
+  padding: 0;
+  border-radius: 20px;
+}
+
+/* Learning Banner */
+.Learning_Banner {
+  border-right: 5px solid #FEAA28;
+  border-radius: 20px;
+  border-left: 5px solid #FEAA28;
+  border-top: 1px solid #fea82853;
+  border-bottom: 1px solid #fea82853;
+}
+
+.Learning_Banner img {
+  padding: 0;
+  border-radius: 20px;
 }
 
 .counters {
@@ -903,6 +918,7 @@ body {
   }
   #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
     padding: 5px;
+    display: none;
   }
   .card-title,.our_channel_title,.subscriber,.videos,.views{
     font-size: medium !important;
@@ -982,6 +998,11 @@ body {
   .text{
     font-size: smaller;
     line-height: 22px !important;
+  }
+  .Learning_Banner,.Game_Banner{
+    margin: 20px 10px !important;
+    aspect-ratio: 21/9;
+    object-fit: cover;
   }
 }
 /* MEDIA QUERIES (Tablet Devices) */
@@ -1092,6 +1113,11 @@ body {
   .text{
     font-size: medium;
     line-height: 24px !important;
+  }
+  .Learning_Banner,.Game_Banner{
+    margin: 20px 10px !important;
+    aspect-ratio: 21/9;
+    object-fit: cover;
   }
 }
 /* MEDIA QUERIES (Laptop Devices) */

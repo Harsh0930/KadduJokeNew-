@@ -249,6 +249,24 @@ const getComedyMoviesVideos = async () => {
     }
 }
 
+// function when user will click on game banner
+function playGame(banner_number) {
+    console.log("funtion called...") 
+    let anchor_teg = document.createElement("a");
+    if(banner_number == 0){
+        anchor_teg.href = "/assets/pages/learning.html";
+    }else{
+        anchor_teg.href = "/assets/pages/gaming.html";
+    }
+   // anchor_teg.target = "_blank";
+    document.body.appendChild(anchor_teg); 
+    
+    //Trigger a click on the anchor element
+    anchor_teg.click(); 
+    //Remove the anchor element from the document (optional) 
+    document.body.removeChild(anchor_teg);   
+  }
+
 getYoutubeSubscribers();
 getYoutubeTitle();
 getYoutubeVideoDetails();
